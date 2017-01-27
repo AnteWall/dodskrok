@@ -27,6 +27,6 @@ export class GameService {
     this._challenges.next(new Array<Challenge>(...this._challenges.value, new Challenge(title)));
   }
   public addPlayer(name: string): void {
-    this._players.next(new Array<Player>(...this._players.value, new Player(name)))
+    this._players.next(new Array<Player>(...this._players.value, new Player(name, null, null)))
   }
 }

@@ -2,6 +2,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 import {NgbModal, ModalDismissReasons, NgbTabsetConfig} from '@ng-bootstrap/ng-bootstrap';
 
+import { GameService } from '../services';
+import { Player } from './../models';
 @Component({
   selector: 'settings',
   templateUrl: './settings.component.html',
@@ -10,10 +12,13 @@ import {NgbModal, ModalDismissReasons, NgbTabsetConfig} from '@ng-bootstrap/ng-b
   providers: [NgbTabsetConfig]
 })
 export class SettingsComponent implements OnInit {
-
-  constructor(private modalService: NgbModal) {}
+  private players: Array<Player>;
+  constructor(private modalService: NgbModal, private gameService: GameService) {
+    this.gameService.players.subscribe((players) => this.players = players);
+  }
 
   ngOnInit() {
+
   }
 
   open(content) {

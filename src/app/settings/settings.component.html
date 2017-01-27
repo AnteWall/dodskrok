@@ -10,6 +10,9 @@
               <md-icon>close</md-icon>            
             </button>
           </div>
+          <div class="p-3">
+            <player-settings *ngFor="let player of players" [player]="player"></player-settings>
+          </div>
         </template>
       </ngb-tab>
       <ngb-tab>

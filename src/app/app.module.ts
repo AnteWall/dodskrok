@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import { MdIconModule } from '@angular/material';
+import { MdIconModule, MdInputModule } from '@angular/material';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +17,7 @@ import { ChallengeComponent } from './game/challenge/challenge.component';
 import { PlayerComponent } from './game/player/player.component';
 import { GameService } from './services';
 import { SettingsComponent } from './settings/settings.component';
+import { PlayerSettingsComponent } from './settings/player-settings/player-settings.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,13 +27,15 @@ import { SettingsComponent } from './settings/settings.component';
     GameContainerComponent,
     ChallengeComponent,
     PlayerComponent,
-    SettingsComponent
+    SettingsComponent,
+    PlayerSettingsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     MdIconModule.forRoot(),
+    MdInputModule.forRoot(),
     NgbModule.forRoot(),
     AppRoutingModule
   ],
