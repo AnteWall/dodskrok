@@ -2,5 +2,5 @@
   <img class="img-fluid" src="/assets/profile/badger.png" alt="Badger" />
 </div>
 <md-input-container>
-  <input md-input placeholder="Namn" value="{{ player.name }}">
+  <input md-input placeholder="Namn" [(ngModel)]="player.name">
 </md-input-container>
