@@ -1,5 +1,5 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
-import { StreamViewState } from './../stream-view-state.enum';
+import { StreamViewState } from './../enums';
 @Component({
   selector: 'video-container',
   templateUrl: './video-container.component.html',

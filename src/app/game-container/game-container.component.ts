@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GameService } from './../game.service';
+import { GameService } from './../services';
 import { Observable } from 'rxjs/Rx';
 
 @Component({
@@ -18,5 +18,4 @@ export class GameContainerComponent implements OnInit {
     this.gameService.challenges.subscribe((challenges) => console.log(challenges));
     this.gameService.startRound();
   }
-
 }

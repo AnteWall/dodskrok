@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject } from 'rxjs/Rx';
 
-import { Challenge } from './interfaces/challenge';
+import { Challenge } from './../../interfaces/challenge';
 
 @Injectable()
 export class GameService {
@@ -14,7 +14,6 @@ export class GameService {
   constructor() {
   }
   
-
   public startRound(): void {
     this._activeRound.next(true);
     this.addChallenge('Test');
