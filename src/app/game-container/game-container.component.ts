@@ -19,5 +19,9 @@ export class GameContainerComponent implements OnInit {
     this.gameService.players.subscribe((players) => console.log(players));
     this.gameService.startRound();
     this.gameService.addPlayer('Ante');
+    this.gameService.addPlayer('Klante');
+    this.gameService.addPlayer('Vante');
+
+
   }
 }
