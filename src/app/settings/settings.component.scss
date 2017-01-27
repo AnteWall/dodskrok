@@ -6,7 +6,7 @@ $modal-min-height: 500px;
     display: block;
     float: left;
     li a{
-        padding: 3rem 1.5rem;
+        padding: 2rem;
 
         &.active {
             background: #E61500 !important;
@@ -21,4 +21,12 @@ $modal-min-height: 500px;
 .modal-content {
     min-height: $modal-min-height;
     border-radius: 10px;
+}
+
+md-icon {
+    color: #FFF;
+    cursor: pointer;
+    &:hover {
+        color: #FFF;
+    }
 }

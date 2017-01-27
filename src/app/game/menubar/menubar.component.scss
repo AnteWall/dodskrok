@@ -12,4 +12,9 @@
         flex-direction: column;
         justify-content: center;
     }
+
+    md-icon {
+        padding: $spacer 0;
+        cursor: pointer;
+    }
 }

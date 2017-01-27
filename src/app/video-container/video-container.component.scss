@@ -37,11 +37,10 @@
         }
     }
 
-
-    .arrow-left,    
-    .arrow-right {
+    md-icon {
         position: absolute;
-        right: 12px;
-        top: 12px;
+        right: 18px;
+        top: 18px;
+        cursor: pointer;
     }
 }

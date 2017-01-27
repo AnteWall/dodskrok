@@ -2,23 +2,23 @@
   <div class="modal-sidenav">
     <ngb-tabset type="pills">
       <ngb-tab>
-        <template ngbTabTitle><b>Fancy</b> title</template>
+        <template ngbTabTitle><md-icon>people</md-icon></template>
         <template ngbTabContent>
           <div class="modal-header">
             <h4 class="modal-title">Spelare</h4>
             <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
+              <md-icon>close</md-icon>            
+            </button>
           </div>
         </template>
       </ngb-tab>
       <ngb-tab>
-        <template ngbTabTitle><b>Fancy</b> title</template>
+        <template ngbTabTitle><md-icon>settings</md-icon></template>
         <template ngbTabContent>
           <div class="modal-header">
             <h4 class="modal-title">Inställningar</h4>
             <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-              <span aria-hidden="true">&times;</span>
+              <md-icon>close</md-icon>            
             </button>
           </div>
         </template>
@@ -27,4 +27,4 @@
   </div>
 </template>
 
-<button class="icon dots" (click)="open(content)" placement="right" ngbTooltip="Inställningar"></button>
+<md-icon (click)="open(content)" placement="right" ngbTooltip="Inställningar">settings</md-icon>

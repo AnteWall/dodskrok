@@ -1,5 +1,7 @@
 <div class="streams" [ngClass]="{'wide': isWideView()}">
-  <div (click)="toggleViewState()" [ngClass]="{'arrow-left': isWideView(), 'arrow-right': !isWideView()}" class="icon"></div>
+  <md-icon *ngIf="isWideView()" (click)="toggleViewState()">chevron_left</md-icon>
+  <md-icon *ngIf="!isWideView()" (click)="toggleViewState()">chevron_right</md-icon>
+  
   <div class="row">
     <div class="main-stream">
       <video poster="https://www.html5rocks.com/en/tutorials/video/basics/poster.png">
