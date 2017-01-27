@@ -1,0 +1,15 @@
+@import '~bootstrap/scss/_variables.scss';
+@import './../../../styles/variables';
+
+:host {
+    display: block;
+    float: left;
+    background: $dark-bg;
+    nav {
+        padding: $spacer;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

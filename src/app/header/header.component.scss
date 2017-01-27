@@ -1,0 +1,21 @@
+@import '~bootstrap/scss/_variables.scss';
+
+:host {
+    position: absolute;
+    top: 0;
+    padding: $spacer;
+    .logo {
+        height: 24px;
+        width: 24px;
+        background: white;
+        border-radius: 50%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    h1 {
+        vertical-align: middle;
+        margin: 0;
+        display: inline-block;
+        font-size: 1.2rem;
+    }
+}

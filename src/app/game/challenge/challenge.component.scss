@@ -1,0 +1,51 @@
+$spinner-animation-speed: 0s;
+:host {
+    display: block;
+    padding: 1rem 0;
+}
+
+h5 {
+  text-align: center;
+}
+
+.spinner-container {
+    width: 189px*8;
+    position: relative;
+    height: 42px;    
+}
+.spinner, .spinner-offset {
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    width: 190px*4;
+    transform: translate3d(0, 0, 0);
+    transition: all 1s ease-in-out;
+    animation-timing-function: linear;
+    animation-duration: $spinner-animation-speed;
+    animation-iteration-count:infinite;
+    animation-name: spinner-animation;
+}
+.spinner-offset {
+    animation-name: spinner-animation-offset;
+    transform: translate3d(100%, 0, 0);
+}
+
+
+@keyframes spinner-animation {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes spinner-animation-offset{
+  0% {
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(0%, 0, 0);
+  }
+}

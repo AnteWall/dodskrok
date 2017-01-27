@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import './styles/variables';
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+
+$icon-color: $color-gray;
+$icon-hover: $brand-primary;
+
+.icon{
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    flex: 0 0 24px;
+    background-color: $icon-color;
+    mask-size: cover;
+    padding: $spacer 0;
+
+    &:hover { background-color: $icon-hover; } 
+
+    &.add-people { mask: url('/assets/icons/add_people.svg') no-repeat 100% 100%; }
+    &.dots { mask: url('/assets/icons/dots.svg') no-repeat 100% 100%; }
+    &.chromecast { mask: url('/assets/icons/chromecast.svg') no-repeat 100% 100%; }
+    &.arrow-left { mask: url('/assets/icons/arrow_left.svg') no-repeat 100% 100%; }
+    &.arrow-right { mask: url('/assets/icons/arrow_right.svg') no-repeat 100% 100%; }
+}

@@ -1,0 +1,33 @@
+@import './../../../styles/variables.scss';
+
+$player-bg: #2f2f2f;
+
+:host {
+    background-color: $player-bg;
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.4);
+    display: inline-block;
+    border-radius: 5px;
+    margin: 0 10px;
+    opacity: 0.5;
+
+    &.active {
+        opacity: 1;
+    }
+    
+    .player-icon {
+        border-radius: 5px 0 0 5px;
+        height: 42px;
+        width: 42px;
+        background-color: $brand-primary;
+        background-image: url('/assets/profile/badger.png');
+        background-size: contain;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    p {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+        padding: 0 1rem;
+    }
+}
