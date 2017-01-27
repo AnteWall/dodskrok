@@ -21,6 +21,10 @@ export class SettingsComponent implements OnInit {
 
   }
 
+  addPlayer() {
+    this.gameService.addPlayer('New Player');
+  }
+
   open(content) {
     this.modalService.open(content, { windowClass: 'dark-modal' });
   }

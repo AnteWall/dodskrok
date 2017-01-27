@@ -12,6 +12,7 @@
           </div>
           <div class="content row">
             <player-settings class="col-4" *ngFor="let player of players" [player]="player"></player-settings>
+            <button class="col-12" (click)="addPlayer()">Lägg till spelare</button>
           </div>
         </template>
       </ngb-tab>
