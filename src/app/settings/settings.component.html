@@ -1,0 +1,30 @@
+<template #content let-c="close" let-d="dismiss">
+  <div class="modal-sidenav">
+    <ngb-tabset type="pills">
+      <ngb-tab>
+        <template ngbTabTitle><b>Fancy</b> title</template>
+        <template ngbTabContent>
+          <div class="modal-header">
+            <h4 class="modal-title">Spelare</h4>
+            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+          </div>
+        </template>
+      </ngb-tab>
+      <ngb-tab>
+        <template ngbTabTitle><b>Fancy</b> title</template>
+        <template ngbTabContent>
+          <div class="modal-header">
+            <h4 class="modal-title">Inställningar</h4>
+            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </template>
+      </ngb-tab>
+    </ngb-tabset>
+  </div>
+</template>
+
+<button class="icon dots" (click)="open(content)" placement="right" ngbTooltip="Inställningar"></button>

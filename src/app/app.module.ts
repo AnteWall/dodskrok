@@ -15,6 +15,7 @@ import { GameContainerComponent } from './game-container/game-container.componen
 import { ChallengeComponent } from './game/challenge/challenge.component';
 import { PlayerComponent } from './game/player/player.component';
 import { GameService } from './services';
+import { SettingsComponent } from './settings/settings.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { GameService } from './services';
     HeaderComponent,
     GameContainerComponent,
     ChallengeComponent,
-    PlayerComponent
+    PlayerComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,

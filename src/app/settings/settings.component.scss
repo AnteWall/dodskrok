@@ -1,0 +1,24 @@
+@import './../../styles/variables';
+$modal-min-height: 500px;
+.nav {
+    min-height: $modal-min-height;
+    background: $brand-primary;
+    display: block;
+    float: left;
+    li a{
+        padding: 3rem 1.5rem;
+
+        &.active {
+            background: #E61500 !important;
+        }
+    }
+}
+
+.modal-header {
+    background: #1f1f1f;
+}
+
+.modal-content {
+    min-height: $modal-min-height;
+    border-radius: 10px;
+}
