@@ -9,18 +9,31 @@ $modal-min-height: 500px;
         padding: 2rem;
 
         &.active {
-            background: #E61500 !important;
+            background: $primary-hover !important;
         }
     }
 }
 
-.content {
+.max-height-content {
     display: flex;
     padding: 2rem;
+    overflow: scroll;
+    max-height: 432px;
+}
+
+.add-btn {
+    cursor: pointer;
+    md-icon, p {
+        color: $color-gray;
+        &:hover { color: #FFF; }
+        vertical-align: middle;
+        display: inline-block;
+        margin: 0;
+    }
 }
 
 .modal-header {
-    background: #1f1f1f;
+    background: $body-bg;
 }
 
 .modal-content {

@@ -10,9 +10,14 @@
               <md-icon>close</md-icon>            
             </button>
           </div>
-          <div class="content row">
+          <div class="max-height-content row">
             <player-settings class="col-4" *ngFor="let player of players" [player]="player"></player-settings>
-            <button class="col-12" (click)="addPlayer()">Lägg till spelare</button>
+            <div class="col-12">
+              <div class="add-btn" (click)="addPlayer()">
+                <md-icon>add_circle</md-icon>
+                <p>Lägg till spelare</p>
+              </div>
+            </div>
           </div>
         </template>
       </ngb-tab>
