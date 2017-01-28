@@ -3,6 +3,8 @@ import { Observable, BehaviorSubject } from 'rxjs/Rx';
 
 import { Challenge, Player } from './../../models';
 
+import { PlayerUtil } from './../../utils';
+
 @Injectable()
 export class GameService {
   private _activeRound: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
@@ -27,6 +29,7 @@ export class GameService {
     this._challenges.next(new Array<Challenge>(...this._challenges.value, new Challenge(title)));
   }
   public addPlayer(name: string): void {
-    this._players.next(new Array<Player>(...this._players.value, new Player(name, null, null)))
+    let playerIcon = PlayerUtil.getUnusedProfileImage(this._players.value.map((player) => player.icon));
+    this._players.next(new Array<Player>(...this._players.value, new Player(name, null, playerIcon)))
   }
 }
