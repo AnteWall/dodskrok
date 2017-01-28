@@ -28,9 +28,18 @@ export class GameService {
   public addChallenge(title: string): void {
     this._challenges.next(new Array<Challenge>(...this._challenges.value, new Challenge(title)));
   }
+
+  public removeChallenge(challenge: Challenge): void {
+    this._challenges.next(new Array<Challenge>(...this._challenges.value.slice(this._challenges.value.indexOf(challenge), 1)));
+  }
+
   public addPlayer(name: string): void {
     let playerIcon = PlayerUtil.getUnusedPlayerImage(this._players.value.map((player) => player.icon));
     let playerColor = PlayerUtil.getUnusedPlayerColor(this._players.value.map((player) => player.color));
     this._players.next(new Array<Player>(...this._players.value, new Player(name, playerColor, playerIcon)))
+  }
+
+  public removePlayer(player: Player): void {
+    this._players.next(new Array<Player>(...this._players.value.slice(this._players.value.indexOf(player), 1)));
   }
 }
