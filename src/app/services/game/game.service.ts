@@ -29,7 +29,8 @@ export class GameService {
     this._challenges.next(new Array<Challenge>(...this._challenges.value, new Challenge(title)));
   }
   public addPlayer(name: string): void {
-    let playerIcon = PlayerUtil.getUnusedProfileImage(this._players.value.map((player) => player.icon));
-    this._players.next(new Array<Player>(...this._players.value, new Player(name, null, playerIcon)))
+    let playerIcon = PlayerUtil.getUnusedPlayerImage(this._players.value.map((player) => player.icon));
+    let playerColor = PlayerUtil.getUnusedPlayerColor(this._players.value.map((player) => player.color));
+    this._players.next(new Array<Player>(...this._players.value, new Player(name, playerColor, playerIcon)))
   }
 }
