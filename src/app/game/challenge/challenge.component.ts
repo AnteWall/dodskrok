@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Challenge, Player } from './../../models';
+import { GameService } from './../../services';
 
 @Component({
   selector: 'challenge',
@@ -6,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./challenge.component.scss']
 })
 export class ChallengeComponent implements OnInit {
+  private players: Player[] = [];
 
-  constructor() { }
+  constructor(private gameService: GameService) {
+    this.gameService.players.subscribe((players) => this.players = players);
+  }
 
   ngOnInit() {
   }
