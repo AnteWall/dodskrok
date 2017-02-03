@@ -17,7 +17,7 @@ $modal-min-height: 500px;
 .max-height-content {
     display: flex;
     padding: 2rem;
-    overflow: scroll;
+    overflow-y: auto;
     max-height: 432px;
 }
 

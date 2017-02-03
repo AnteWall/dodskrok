@@ -39,7 +39,7 @@ export class GameService {
     this._players.next(new Array<Player>(...this._players.value, new Player(name, playerColor, playerIcon)))
   }
 
-  public removePlayer(player: Player): void {
-    this._players.next(new Array<Player>(...this._players.value.slice(this._players.value.indexOf(player), 1)));
+  public removePlayer(player: Player): void {        
+    this._players.next(new Array<Player>(...this._players.value.filter((_v, index) => index !== this._players.value.indexOf(player))));
   }
 }

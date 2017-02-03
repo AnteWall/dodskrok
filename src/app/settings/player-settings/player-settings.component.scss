@@ -1,3 +1,5 @@
+@import './../../../styles/variables';
+
 .player-icon {
     width: 32px;
     height: 32px;
@@ -13,6 +15,14 @@ md-input-container {
     vertical-align: middle;
     display: inline-block;
     flex: 1;
+}
+
+md-icon {
+    color: $color-gray;
+    cursor: pointer;
+    &:hover {
+        color: #FFF;
+    }
 }
 
 :host {
