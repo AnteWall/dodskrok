@@ -1,9 +1,4 @@
-<h5 class="px-3">Challenge name</h5>
-<div class="spinner-container">
-  <div class="spinner">
-    <player *ngFor="let player of players" [player]="player"></player>    
-  </div>
-  <div class="spinner-offset">
-    <player *ngFor="let player of players" [player]="player"></player>    
-  </div>
+<h5 class="px-3">Dra en jäger</h5>
+<div class="stack stack-queue active">
+  <player [ngStyle]="getPlayerStyle(i)" *ngFor="let player of players; let i = index;" [player]="player"></player>    
 </div>

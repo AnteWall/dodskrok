@@ -3,12 +3,17 @@
 $player-bg: #2f2f2f;
 
 :host {
+	transition: transform 200ms linear;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     background-color: $player-bg;
     box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.4);
-    display: inline-block;
+    display: block;
     border-radius: 5px;
-    margin: 0 10px;
-    opacity: 0.5;
+    z-index: 0;
 
     &.active {
         opacity: 1;
@@ -16,13 +21,14 @@ $player-bg: #2f2f2f;
     
     .player-icon {
         border-radius: 5px 0 0 5px;
-        height: 42px;
-        width: 42px;
+        height: 64px;
+        width: 64px;
         background-color: $brand-primary;
         background-image: url('assets/profile/badger.png');
         background-size: contain;
         display: inline-block;
         vertical-align: middle;
+        z-index: 0;
     }
     p {
         display: inline-block;

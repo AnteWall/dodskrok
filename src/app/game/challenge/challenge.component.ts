@@ -9,12 +9,31 @@ import { GameService } from './../../services';
 })
 export class ChallengeComponent implements OnInit {
   private players: Player[] = [];
+  private currentIndex = 1;
 
   constructor(private gameService: GameService) {
     this.gameService.players.subscribe((players) => this.players = players);
   }
 
   ngOnInit() {
+    /*setInterval(() => {
+        this.currentIndex += 1;
+        if(this.currentIndex >= this.players.length)
+          this.currentIndex = 0;
+    }, 200);*/
+  }
+
+  
+
+  getPlayerStyle(playerIndex: number) {
+    let zIndex = (playerIndex >= this.currentIndex) ? this.players.length - playerIndex : 0;
+    
+    let scale = (playerIndex >= this.currentIndex) ? 1 - ((playerIndex - this.currentIndex) * 0.1) : 1 - ((this.players.length - (this.currentIndex - playerIndex))*0.1);
+    return {
+      'z-index': zIndex,
+      'transform': `scale(${scale})`,
+      'opacity': 1//(playerIndex >= this.currentIndex) ? 1 : 0
+    }
   }
 
 }
