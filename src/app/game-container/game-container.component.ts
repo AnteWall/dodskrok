@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GameService } from './../services';
 import { Observable } from 'rxjs/Rx';
+import { Challenge } from './../models';
 
 @Component({
   selector: 'game-container',
@@ -8,20 +9,17 @@ import { Observable } from 'rxjs/Rx';
   styleUrls: ['./game-container.component.scss']
 })
 export class GameContainerComponent implements OnInit {
-
+  private challenges: Challenge[] = [];
   constructor(private gameService: GameService) {
 
   }
 
   ngOnInit() {
     this.gameService.activeRound.subscribe((active) => console.log(active));
-    this.gameService.challenges.subscribe((challenges) => console.log(challenges));
-    this.gameService.players.subscribe((players) => console.log(players));
+    this.gameService.challenges.subscribe((challenges) => this.challenges = challenges);
     this.gameService.startRound();
     this.gameService.addPlayer('Ante');
     this.gameService.addPlayer('Klante');
     this.gameService.addPlayer('Vante');
-
-
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Challenge, Player } from './../../models';
 import { GameService } from './../../services';
 
@@ -8,6 +8,7 @@ import { GameService } from './../../services';
   styleUrls: ['./challenge.component.scss']
 })
 export class ChallengeComponent implements OnInit {
+  @Input('challenge') challenge: Challenge;
   private players: Player[] = [];
   private currentIndex = 1;
 
@@ -27,8 +28,8 @@ export class ChallengeComponent implements OnInit {
 
   getPlayerStyle(playerIndex: number) {
     let zIndex = (playerIndex >= this.currentIndex) ? this.players.length - playerIndex : 0;
-    
     let scale = (playerIndex >= this.currentIndex) ? 1 - ((playerIndex - this.currentIndex) * 0.1) : 1 - ((this.players.length - (this.currentIndex - playerIndex))*0.1);
+    scale = (scale < 0) ? 0 : scale; // Prevent scale from going below zero
     return {
       'z-index': zIndex,
       'transform': `scale(${scale})`,

@@ -6,8 +6,12 @@ $spinner-animation-speed: 0s;
 }
 
 h5 {
-  text-align: center;
-  z-index: 100;
+  	text-align: center;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	left: 0;
+	right: 0;
 }
 .stack {
   margin: 20px auto;
