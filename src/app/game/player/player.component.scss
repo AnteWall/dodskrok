@@ -20,20 +20,20 @@ $player-bg: #2f2f2f;
     }
     
     .player-icon {
-        border-radius: 5px 0 0 5px;
-        height: 64px;
-        width: 64px;
+        //border-radius: 5px 0 0 5px;
+        height: 84px;
         background-color: $brand-primary;
         background-image: url('assets/profile/badger.png');
         background-size: contain;
-        display: inline-block;
+        background-repeat: no-repeat;
+        background-position: 50%;
         vertical-align: middle;
         z-index: 0;
     }
     p {
-        display: inline-block;
         vertical-align: middle;
         margin: 0;
-        padding: 0 1rem;
+        text-align: center;
+        padding: 1rem;
     }
 }

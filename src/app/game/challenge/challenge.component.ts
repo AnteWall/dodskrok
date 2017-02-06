@@ -16,11 +16,11 @@ export class ChallengeComponent implements OnInit {
   }
 
   ngOnInit() {
-    /*setInterval(() => {
+    setInterval(() => {
         this.currentIndex += 1;
         if(this.currentIndex >= this.players.length)
           this.currentIndex = 0;
-    }, 200);*/
+    }, 200);
   }
 
   
@@ -32,7 +32,7 @@ export class ChallengeComponent implements OnInit {
     return {
       'z-index': zIndex,
       'transform': `scale(${scale})`,
-      'opacity': 1//(playerIndex >= this.currentIndex) ? 1 : 0
+      'opacity': (playerIndex === this.currentIndex) ? 1 : 0.8
     }
   }
 
