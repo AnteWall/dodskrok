@@ -30,7 +30,7 @@ export class GameService {
   }
 
   public removeChallenge(challenge: Challenge): void {
-    this._challenges.next(new Array<Challenge>(...this._challenges.value.slice(this._challenges.value.indexOf(challenge), 1)));
+    this._challenges.next(new Array<Challenge>(...this._challenges.value.filter((_v, index) => index !== this._challenges.value.indexOf(challenge))));
   }
 
   public addPlayer(name: string): void {

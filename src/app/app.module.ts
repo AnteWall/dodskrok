@@ -18,6 +18,7 @@ import { PlayerComponent } from './game/player/player.component';
 import { GameService } from './services';
 import { SettingsComponent } from './settings/settings.component';
 import { PlayerSettingsComponent } from './settings/player-settings/player-settings.component';
+import { ChallengeSettingsComponent } from './settings/challenge-settings/challenge-settings.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { PlayerSettingsComponent } from './settings/player-settings/player-setti
     ChallengeComponent,
     PlayerComponent,
     SettingsComponent,
-    PlayerSettingsComponent
+    PlayerSettingsComponent,
+    ChallengeSettingsComponent
   ],
   imports: [
     BrowserModule,

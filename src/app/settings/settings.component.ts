@@ -3,7 +3,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import {NgbModal, ModalDismissReasons, NgbTabsetConfig} from '@ng-bootstrap/ng-bootstrap';
 
 import { GameService } from '../services';
-import { Player } from './../models';
+import { Player, Challenge } from './../models';
 @Component({
   selector: 'settings',
   templateUrl: './settings.component.html',
@@ -13,12 +13,18 @@ import { Player } from './../models';
 })
 export class SettingsComponent implements OnInit {
   private players: Array<Player>;
+  private challenges: Array<Challenge>;
   constructor(private modalService: NgbModal, private gameService: GameService) {
     this.gameService.players.subscribe((players) => this.players = players);
+    this.gameService.challenges.subscribe((challenges) => this.challenges = challenges);
   }
 
   ngOnInit() {
 
+  }
+
+  addChallenge() {
+    this.gameService.addChallenge('New Challenge');
   }
 
   addPlayer() {

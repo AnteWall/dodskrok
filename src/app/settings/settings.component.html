@@ -30,6 +30,15 @@
               <md-icon>close</md-icon>            
             </button>
           </div>
+          <div class="max-height-content row">
+            <challenge-settings class="col-4" *ngFor="let challenge of challenges" [challenge]="challenge"></challenge-settings>
+            <div class="col-12">
+              <div class="add-btn" (click)="addChallenge()">
+                <md-icon>add_circle</md-icon>
+                <p>Lägg till utmaning</p>
+              </div>
+            </div>
+          </div>
         </template>
       </ngb-tab>
       <ngb-tab>
