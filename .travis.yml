@@ -6,7 +6,7 @@ cache:
   - node_modules
 dist: trusty
 node_js:
-- 6.7.0
+- 7.5.0
 branches:
   only:
   - master

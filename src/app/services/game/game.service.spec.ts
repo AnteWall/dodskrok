@@ -3,7 +3,7 @@
 import { TestBed, async, inject } from '@angular/core/testing';
 import { GameService } from './game.service';
 
-fdescribe('GameService', () => {
+describe('GameService', () => {
   let service: GameService;
   beforeEach(() => {
     TestBed.configureTestingModule({
