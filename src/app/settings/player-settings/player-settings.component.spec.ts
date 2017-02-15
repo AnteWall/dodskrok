@@ -1,8 +1,8 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { DebugElement, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { MdInputModule } from '@angular/material';
 import { PlayerSettingsComponent } from './player-settings.component';
 
 describe('PlayerSettingsComponent', () => {
@@ -11,7 +11,11 @@ describe('PlayerSettingsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PlayerSettingsComponent ]
+      imports: [MdInputModule],
+      declarations: [
+        PlayerSettingsComponent
+      ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   }));

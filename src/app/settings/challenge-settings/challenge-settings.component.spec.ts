@@ -2,6 +2,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
+import { MdIcon, MdInputContainer, MdInput } from '@angular/material';
 
 import { ChallengeSettingsComponent } from './challenge-settings.component';
 
@@ -11,7 +12,12 @@ describe('ChallengeSettingsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChallengeSettingsComponent ]
+      declarations: [ 
+        ChallengeSettingsComponent,
+        MdIcon,
+        MdInput,
+        MdInputContainer
+      ]
     })
     .compileComponents();
   }));
