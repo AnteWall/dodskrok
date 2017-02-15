@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { PlayerComponent } from './player.component';
+import { Player } from './../../models';
 
 describe('PlayerComponent', () => {
   let component: PlayerComponent;
@@ -19,6 +20,7 @@ describe('PlayerComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(PlayerComponent);
     component = fixture.componentInstance;
+    component.player = new Player('PlayerName', 'blue', 'images');
     fixture.detectChanges();
   });
 

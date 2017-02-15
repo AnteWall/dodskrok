@@ -25,18 +25,22 @@ export class GameService {
     this._activeRound.next(false);
   }
 
-  public addChallenge(title: string): void {
-    this._challenges.next(new Array<Challenge>(...this._challenges.value, new Challenge(title)));
+  public addChallenge(title: string): Challenge {
+    let challenge = new Challenge(title);
+    this._challenges.next(new Array<Challenge>(...this._challenges.value, challenge));
+    return challenge;
   }
 
   public removeChallenge(challenge: Challenge): void {
     this._challenges.next(new Array<Challenge>(...this._challenges.value.filter((_v, index) => index !== this._challenges.value.indexOf(challenge))));
   }
 
-  public addPlayer(name: string): void {
+  public addPlayer(name: string): Player {
     let playerIcon = PlayerUtil.getUnusedPlayerImage(this._players.value.map((player) => player.icon));
     let playerColor = PlayerUtil.getUnusedPlayerColor(this._players.value.map((player) => player.color));
-    this._players.next(new Array<Player>(...this._players.value, new Player(name, playerColor, playerIcon)))
+    let newPlayer = new Player(name, playerColor, playerIcon);
+    this._players.next(new Array<Player>(...this._players.value, newPlayer))
+    return newPlayer;
   }
 
   public removePlayer(player: Player): void {        

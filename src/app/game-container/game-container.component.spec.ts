@@ -4,6 +4,9 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { GameContainerComponent } from './game-container.component';
+import { ChallengeComponent } from './../game/challenge/challenge.component';
+import { PlayerComponent } from './../game/player/player.component';
+import { GameService } from './../services';
 
 describe('GameContainerComponent', () => {
   let component: GameContainerComponent;
@@ -11,9 +14,13 @@ describe('GameContainerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GameContainerComponent ]
-    })
-    .compileComponents();
+      declarations: [
+        GameContainerComponent,
+        ChallengeComponent,
+        PlayerComponent
+      ],
+      providers: [GameService]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

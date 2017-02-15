@@ -1,17 +1,23 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { DebugElement, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { MdIconModule, MdIconRegistry, MdToolbarModule } from '@angular/material';
+import { HttpModule } from '@angular/http'; 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MenubarComponent } from './menubar.component';
-
+import { SettingsComponent } from './../../settings/settings.component';
+import { GameService } from './../../services';
 describe('MenubarComponent', () => {
   let component: MenubarComponent;
   let fixture: ComponentFixture<MenubarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MenubarComponent ]
+      imports: [HttpModule, NgbModule.forRoot(), MdToolbarModule],
+      declarations: [ MenubarComponent, SettingsComponent ],
+      providers: [ MdIconRegistry, GameService],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   }));
