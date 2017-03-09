@@ -10,3 +10,11 @@ md-icon {
     color: $icon-color;
     &:hover {color: $icon-hover; }
 }
+.loading {
+    margin: 40px auto 0 auto;
+    text-align: center;
+}
+#loading-beer {
+    margin: 20px auto;
+    display: block;
+}
